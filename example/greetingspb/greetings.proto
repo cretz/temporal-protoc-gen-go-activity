@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+package temporal.example.greetings;
+
+option go_package = "github.com/cretz/temporal-protoc-gen-go-activity/example/greetingspb";
+
+// Greetings activities.
+service Greetings {
+  // Get the greeting.
+  rpc GetGreeting (GetGreetingRequest) returns (GetGreetingResponse) {}
+
+  // Get the name.
+  rpc GetName (GetNameRequest) returns (GetNameResponse) {}
+
+  // Say the greeting.
+  rpc SayGreeting (SayGreetingRequest) returns (SayGreetingResponse) {}
+}
+
+message GetGreetingRequest {}
+
+message GetGreetingResponse {
+  string greeting = 1;
+}
+
+message GetNameRequest {}
+
+message GetNameResponse {
+  string name = 1;
+}
+
+message SayGreetingRequest {
+  string greeting = 1;
+  string name = 2;
+}
+
+message SayGreetingResponse {
+  string greeting = 1;
+}
