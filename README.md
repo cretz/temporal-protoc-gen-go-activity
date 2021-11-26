@@ -18,11 +18,11 @@ installed and on the `PATH`.
 
 If not already installed, the protobuf Go code generator should be installed with:
 
-    go install google.golang.org/protobuf/cmd/protoc-gen-go
+    go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
 
 Similarly, this code generator should also be installed with:
 
-    go install github.com/cretz/temporal-protoc-gen-go-activity/protoc-gen-go-activity
+    go install github.com/cretz/temporal-protoc-gen-go-activity/protoc-gen-go-activity@latest
 
 The Go `bin` also needs to be on the `PATH` for those two protoc-gen binaries to be seen by `protoc`. For example, on
 Linux:
